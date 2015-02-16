@@ -1,6 +1,6 @@
 angular.module('ionic.ion.headerShrink', [])
 
-.directive('headerShrink', function($document) {
+.directive('headerShrink', [ '$document', function($document) {
   var fadeAmt;
 
   var shrink = function(header, content, amt, max) {
@@ -39,7 +39,6 @@ angular.module('ionic.ion.headerShrink', [])
         } else {
           y = 0;
         }
-        console.log(scrollTop);
 
         ionic.requestAnimationFrame(function() {
           fadeAmt = 1 - (y / headerHeight);
@@ -55,5 +54,4 @@ angular.module('ionic.ion.headerShrink', [])
       $element.bind('scroll', onScroll);
     }
   }
-})
-
+}])
