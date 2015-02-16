@@ -54,4 +54,4 @@ angular.module('ionic.ion.headerShrink', [])
       $element.bind('scroll', onScroll);
     }
   }
-}])
+}]);
